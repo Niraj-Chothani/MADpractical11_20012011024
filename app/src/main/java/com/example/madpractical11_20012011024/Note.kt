@@ -5,7 +5,17 @@ import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
 
-class Note(var id:String,var title:String,var subTitle:String,var Description:String,var modifiedTime:String,var reminderTime:Long,var isReminder:Boolean) {
+class Note(
+    var id:String="",
+    var title:String="",
+    var subTitle:String="",
+    var Description:String="",
+    var modifiedTime:String="",
+    var reminderTime: Long=0,
+    var isReminder: Boolean=true
+) {
+
+
     fun isValid() : Boolean{
         if(title.isEmpty() || Description.isEmpty())
             return false
